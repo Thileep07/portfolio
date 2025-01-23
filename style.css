@@ -37,11 +37,11 @@ html{
     border-radius: 25px;
 }
 ::-webkit-scrollbar-track{
-    background: #dddbdb;
+    background: #eae2e2;
 }
 ::-webkit-scrollbar-thumb{
-    background: #9f9e9e;
-    border-radius: 30px;
+    background: #aeabab;
+    border-radius: 1px;
 }
 ::-webkit-scrollbar-thumb:hover{
     background: #999797;
@@ -51,7 +51,7 @@ html{
 /* ---##-- REUSABLE CSS --##--- */
 
 /* ----- GLOBAL BUTTON DESIGN ----- */
-.btn{
+.btn {
     font-weight: 500;
     padding: 12px 20px;
     background: #f0eded;
@@ -105,9 +105,10 @@ nav{
 }
 .nav-logo span{
     position: absolute;
-    top: -15px;
-    right: -20px;
-    font-size: 5em;
+    top: -1px;
+    right: -30px;
+    font-size: 30px;
+    font-weight: 600;
     color: var(--text-color-second);
 }
 .nav-menu, .nav_menu_list{
@@ -124,6 +125,10 @@ nav{
     padding-inline: 15px;
     margin-inline: 20px;
 }
+.nav-link:hover{
+    color:rgb(52, 115, 224);
+
+}
 .nav-menu-btn{
     display: none;
 }
@@ -131,12 +136,15 @@ nav{
     font-size: 28px;
     cursor: pointer;
 }
+.nav-button a{
+    text-decoration: none;
+}
 .active-link{
     position: relative;
     color: var(--first-color);
     transition: .3;
 }
-.active-link::before{
+.active-link::after{
     content: '';
     position: absolute;
     left: 50%;
@@ -177,12 +185,12 @@ nav{
     background: var(--third-color);
     color: var(--color-white);
     padding: 3px 8px;
-    font-size: 12px;
-    border-radius: 5px;
+    font-size: 20px;
+    border-radius: 50px;
 }
 .featured-name{
     font-size: 50px;
-    font-weight: 600;
+    font-weight: 600px;
     color: var(--text-color-second);
     margin-block: 20px;
 }
@@ -197,7 +205,11 @@ nav{
 }
 .featured-text-btn{
     display: flex;
+    text-decoration: none;
     gap: 20px;
+}
+.featured-text-btn a{
+    text-decoration: none;
 }
 .featured-text-btn>.blue-btn{
     background: var(--first-color);
@@ -215,14 +227,17 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    border-radius: 60%;
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }
-.icon:hover{
-    color: var(--first-color);
+.icon::after{
+    background: #00B5E7;
+}
+.icon a{
+    text-decoration:none;
 }
 
 /* ----- FEATURED IMAGE BOX ----- */
@@ -336,6 +351,9 @@ h3{
 }
 .about-btn button:hover{
     background: var(--first-color-hover);
+}
+.about-btn a{
+    text-decoration: none;
 }
 
 /* ----- ABOUT / SKILLS BOX ----- */
@@ -527,6 +545,7 @@ footer{
 .bottom-footer{
     font-size: 14px;
     margin-top: 10px;
+    background-color: rgb(244, 235, 235);
 }
 
 
@@ -544,7 +563,7 @@ footer{
 /* ----- MEDIA QUERY == 900px / RESPONSIVE ----- */
 @media only screen and (max-width: 900px) {
     .nav-button{
-        display: none;
+        display:none ;
     }
     .nav-menu.responsive{
         left: 0;
@@ -556,8 +575,8 @@ footer{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: rgba(240, 236, 236, 0.7);
-        backdrop-filter: blur(20px);
+        background: rgba(246, 244, 244, 0.7);
+        backdrop-filter: blur(30px);
         width: 100%;
         min-height: 450px;
         height: 90vh;
