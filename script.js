@@ -33,7 +33,7 @@ function myMenuFunction(){
 
 /* ----- TYPING EFFECT ----- */
  var typingEffect = new Typed(".typedText",{
-    strings : ["Designer","Youtuber","Developer"],
+    strings : ["Fresher"],
     loop : true,
     typeSpeed : 100, 
     backSpeed : 80,
@@ -113,5 +113,24 @@ function scrollActive() {
     }
   })
 }
+const form = document.querySelector('form');
+
+function sendEmail(){
+  sendEmail.send({
+    host: "smtp.gmail.com",
+     username:"thileepane03@gmail.com",
+     password:"anithathileepan.",
+     To:'elangovan1172@gmail.com',
+     form: document.getElementById("email").value,
+     subject: "this is the subject",
+     body:"name:" + document.getElementById("name").value
+     +"<br> email:" + document.getElementById("email").value
+     +"<br> message:" + document.getElementById("message").value
+  }).them(
+    message => alert(message)
+  );
+
+
+  }
 
 window.addEventListener('scroll', scrollActive)
